@@ -14,6 +14,9 @@ class Elements {
     }
     console.log(this.cardsIndex);
   }
+  shuffleIndex(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
   createCard() {
     this.playground.style.gridTemplateRows = `repeat(${Math.sqrt(
       this.cardsNumber
@@ -21,7 +24,7 @@ class Elements {
     this.playground.style.gridTemplateColumns = `repeat(${Math.sqrt(
       this.cardsNumber
     )}, 1fr)`;
-    this.cardsIndex.forEach((index) => {
+    this.shuffleIndex(this.cardsIndex).forEach((index) => {
       const card = document.createElement("div");
       card.classList.add("card");
       card.setAttribute("data-index", index);
