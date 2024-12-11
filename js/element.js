@@ -6,7 +6,6 @@ class Elements {
     this.doubleindex();
     this.createCard();
 
-    // Use querySelectorAll to get all cards
     this.cards = document.querySelectorAll(".card");
 
     this.attempts = {

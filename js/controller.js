@@ -37,10 +37,13 @@ class Controller {
               this.prevCard.classList.add("stop");
             } else {
               attempts.wrong++;
-              card.classList.remove("change");
-              this.prevCard.classList.remove("change");
+              setTimeout(() => {
+                card.classList.remove("change");
+                this.prevCard.classList.remove("change");
+              }, 1000);
             }
             attempts.click = 0;
+            this.endGame(attempts);
             console.log(attempts.correct, attempts.wrong);
           }, 1000);
         } else {
@@ -51,8 +54,15 @@ class Controller {
   }
   endGame({ correct }) {
     const { cardsNumber, modal, modalBtn, wrong, attempts } = this.elements;
+    console.log(modal);
+
     if (correct === cardsNumber / 2) {
-      console.log("");
+      console.log("You won");
+      modal.style.cssText = "visibility: visible; opacity:1;";
+      wrong.textContent = attempts.wrong;
+      modalBtn.onclick = () => location.reload();
+    } else {
+      console.log("not yet");
     }
   }
 }
