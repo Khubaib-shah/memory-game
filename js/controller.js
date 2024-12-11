@@ -40,10 +40,8 @@ class Controller {
               this.prevCard.classList.add("stop");
             } else {
               attempts.wrong++;
-              setTimeout(() => {
-                card.classList.remove("change");
-                this.prevCard.classList.remove("change");
-              }, 1000);
+              card.classList.remove("change");
+              this.prevCard.classList.remove("change");
             }
             attempts.click = 0;
             this.endGame(attempts);
@@ -59,7 +57,6 @@ class Controller {
   endGame({ correct }) {
     const { cardsNumber, modal, modalBtn, wrong, attempts, timer, modalTime } =
       this.elements;
-    console.log(modal);
 
     if (correct === cardsNumber / 2) {
       console.log("You won");
