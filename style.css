@@ -40,12 +40,21 @@ html {
   border-radius: inherit;
   cursor: pointer;
 }
+.card.pause {
+  pointer-events: none;
+}
+.card.stop {
+  pointer-events: none;
+}
 .card img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
   background-color: var(--white);
   border-radius: inherit;
+}
+.card.change img {
+  background-color: #119ec9;
 }
 .modal {
   position: fixed;
