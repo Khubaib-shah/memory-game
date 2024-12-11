@@ -16,6 +16,8 @@ class Elements {
     this.modal = document.querySelector(".modal");
     this.modalBtn = document.querySelector(".modal-btn");
     this.wrong = document.querySelector(".wrong");
+    this.timer = document.querySelector(".timer");
+    this.modalTime = document.querySelector(".modal-time");
   }
 
   doubleindex() {
