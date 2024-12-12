@@ -153,3 +153,16 @@ html {
 .timer span:last-child {
   margin-left: 0.5rem;
 }
+@media (max-width: 600px) {
+  :root {
+    --gap: 0.5rem;
+  }
+  .playground {
+    width: 95vmin;
+    height: 95vmin;
+  }
+  .modal-content {
+    width: 36rem;
+    text-align: center;
+  }
+}
